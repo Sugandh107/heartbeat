@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            background-color: #0b1522;
+        }
+       
+        .heart{
+            height: 70px;
+            width: 70px;
+            background-color: #f20044;
+            position: relative;
+            left: 42%;
+            transform: rotate(-45deg);
+
+
+            
+            animation: heart 1s infinite linear;
+           
+        }
+
+        .heart:before{
+            content: "";
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background-color: #f20044;
+            top: -50%;
+            border-radius: 50px;
+        }
+
+        .heart:after{
+            content: "";
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background-color: #f20044;
+           right:  -50%;
+            border-radius: 50px;
+        }
+        .heart:active{
+           animation: heartbeat 1s infinite linear;;
+        }
+
+        @keyframes heart{
+            0%{
+                scale: 1.1;
+
+            }
+            85%{
+                scale: 1;
+            }
+        }
+
+
+        @keyframes heartbeat{
+            0%{
+                scale: 1.1;
+
+            }
+            35%{
+                scale: 1;
+            }
+            40%{
+                scale: 1.5;
+            }
+
+            85%{
+                scale: 1;
+            }
+
+        }
+
+        h1{
+            color: wheat;
+            position: absolute;
+            top:60%;
+            left: 25%;
+        }
+    </style>
+    <div class="heart"></div>
+    <h1>Hold the Heart</h1>
+</body>
+</html>
